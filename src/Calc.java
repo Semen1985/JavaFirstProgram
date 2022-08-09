@@ -4,18 +4,19 @@ public class Calc {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
+        double num1 = getInt();
+        double num2 = getInt();
         char operation = getOperation();
-        int result = calc(num1,num2,operation);
+        double result = calc(num1,num2,operation);
         System.out.println("Result: "+result);
     }
 
-    public static int getInt(){
+    public static double getInt(){
         System.out.println("Input number:");
-        int num;
+        double num;
         if(scanner.hasNextInt()){
             num = scanner.nextInt();
+
         } else {
             System.out.println("You did mistake! Try one more time))).");
             scanner.next();
@@ -37,24 +38,17 @@ public class Calc {
         return operation;
     }
 
-    public static int calc(int num1, int num2, char operation){
-        int result;
-        switch (operation){
-            case '+':
-                result = num1+num2;
-                break;
-            case '-':
-                result = num1-num2;
-                break;
-            case '*':
-                result = num1*num2;
-                break;
-            case '/':
-                result = num1/num2;
-                break;
-            default:
+    public static double calc(double num1, double num2, char operation){
+        double result;
+        switch (operation) {
+            case '+' -> result = num1 + num2;
+            case '-' -> result = num1 - num2;
+            case '*' -> result = num1 * num2;
+            case '/' -> result = num1 / num2;
+            default -> {
                 System.out.println("Something wrong! ( Try one more time.");
                 result = calc(num1, num2, getOperation());
+            }
         }
         return result;
     }
