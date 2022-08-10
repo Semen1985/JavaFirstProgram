@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Calc {
     static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         double num1 = getInt();
         double num2 = getInt();
         char operation = getOperation();
@@ -55,29 +55,31 @@ public class Calc {
 
 
 
-
-    public static int calc(int a, int b, char op)
+    public static double calc2(int num1, int num2, char operation)
     {
         int res = 0;
 
-        if (op == '+') {
-            res = a + b;
+        if (operation == '+') {
+            res = num1 + num2;
 
         }
-        else if (op == '-') {
-            res = a - b;
+        else if (operation == '-') {
+            res = num1 - num2;
 
         }
-        else if (op == '*') {
-            res = a * b;
+        else if (operation == '*') {
+            res = num1 * num2;
 
         }
 
-        else if (op == '/') {
-            res = a / b;
+        else if (operation == '/') {
+            res = num1 / num2;
         }
 
         System.out.println("Your answer is - " + res);
         return res;
     }
 }
+
+
+
