@@ -38,7 +38,7 @@ public class Calc {
         return operation;
     }
 
-    public static double calc(double num1, double num2, char operation) {
+   /** public static double calc(double num1, double num2, char operation) {
         double result;
         switch (operation) {
             case '+' -> result = num1 + num2;
@@ -51,13 +51,13 @@ public class Calc {
             }
         }
         return result;
-    }
+    }*/
 
 
 
-    public static double calc2(int num1, int num2, char operation)
+    public static double calc(double num1, double num2, char operation)
     {
-        int res = 0;
+        double res = 0;
 
         if (operation == '+') {
             res = num1 + num2;
